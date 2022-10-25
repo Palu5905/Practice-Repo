@@ -31,10 +31,5 @@ module.exports.userData=userData
 
 
 
-
-
-
-
-
 module.exports.createUser= createUser
 module.exports.getUsersData= getUsersData
