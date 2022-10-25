@@ -11,5 +11,30 @@ const getUsersData= async function (req, res) {
     res.send({msg: allUsers})
 }
 
+/////////////////========================================
+
+
+const bookList=async function (req,res){
+    let recvidData=req.body
+    let allSavedata=await UserModel.create(recvidData)
+    res.send({massage:allSavedata})
+}
+
+const userData=async function (req,res){
+    let jio = await UserModel.find()
+    res.send({massage:jio})
+}
+
+module.exports.bookList=bookList
+module.exports.userData=userData
+
+
+
+
+
+
+
+
+
 module.exports.createUser= createUser
 module.exports.getUsersData= getUsersData
