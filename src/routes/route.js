@@ -4,6 +4,20 @@ const UserController= require("../controllers/userController")
 const BookController= require("../controllers/bookController")
 const commonMW = require ("../middlewares/commonMiddlewares")
 
+///////========================================================
+
+
+const finalUserData =require("../controllers/userSchCOn")
+const finalProducatData=require("../controllers/productController")
+const finalorderData=require("../controllers/orderController")
+
+router.post("/user-Data",finalUserData.userAPI)
+router.post("/producat-Data",finalProducatData.product)
+router.post("/order-Data",finalorderData.orderRE)
+router.get("/Final-AllData",finalorderData.orderAPI)
+
+
+
 router.get("/test-me", function (req, res) {
     res.send("My first ever api!")
 })
